@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# ⚛️ React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a personal setup for experimenting and learning with **React**, **TypeScript**, and **Vite**.
+It serves as a base for testing components, exploring React concepts, and maintaining version updates as I continue improving my React skills and project structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧠 Overview
 
-## React Compiler
+* Built using **Vite** for fast development and Hot Module Replacement (HMR).
+* Uses **React** with **TypeScript** for type-safe component development.
+* Configured with **ESLint** for clean and consistent code formatting.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tool              | Purpose                                          |
+| ----------------- | ------------------------------------------------ |
+| ⚛️ **React**      | UI library for building interactive interfaces   |
+| 🟦 **TypeScript** | Adds static typing and enhances code reliability |
+| ⚡ **Vite**        | Fast bundler and development server              |
+| 🧹 **ESLint**     | Helps maintain code quality and consistency      |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Start development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Then open your browser at **[http://localhost:5173](http://localhost:5173)**
+
+---
+
+## 📁 Folder Structure
+
+```
+.
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   ├── App.tsx          # Root component
+│   ├── main.tsx         # Entry point
+│   └── styles/          # Global or component-level styles
+├── tsconfig.json        # TypeScript configuration
+├── vite.config.ts       # Vite configuration
+└── eslint.config.js     # ESLint setup
+```
+
+---
+
+## 🚀 Commands
+
+| Command           | Description                          |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Start local development server       |
+| `npm run build`   | Build production-ready files         |
+| `npm run lint`    | Run ESLint checks                    |
+| `npm run preview` | Preview the production build locally |
+
+---
+
+## 🧩 Notes
+
+This repository is primarily for:
+
+* Testing React + TypeScript features
+* Trying out different ESLint configurations
+* Keeping track of incremental updates and improvements
+
+---
+
+## 👩‍💻 Author
+
+**Preeti Das**
+App Developer | Exploring React + TypeScript | Always learning 🌱
+[LinkedIn](https://www.linkedin.com/in/your-profile/) • [GitHub](https://github.com/your-username)
