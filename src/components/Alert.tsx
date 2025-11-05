@@ -2,12 +2,12 @@ import type { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  onClose: ()=>  void;
+  onClose: () => void;
 }
 
 const Alert = ({ children, onClose }: Props) => {
   return (
-    <div className="alert alert-primary alert-dismissible">
+    <div className="alert alert-info alert-dismissible fade show mt-3">
       {children}
       <button
         type="button"
